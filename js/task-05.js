@@ -1,11 +1,21 @@
 
 const wayImput = document.querySelector('#name-input');
 
+
 const waySpan = document.querySelector('#name-output');
 
 wayImput.addEventListener("input", (event) => {
-  waySpan.textContent = event.currentTarget.value;
+
+  const eventTarget = event.currentTarget.value
+
+  if (eventTarget == "") {    
+     waySpan.textContent = "Anonymous";
+    return
+  };
+ 
+  waySpan.textContent = eventTarget;
+
 });
 
-    
-   console.log(wayImput) 
+  
+  

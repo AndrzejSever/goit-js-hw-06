@@ -22,8 +22,22 @@ const nowGallery = images => {
       </li>
     `;
   }).join('');
+  
 };
+
 
 const nowMarkup = nowGallery(images);
 nowImag.insertAdjacentHTML('beforeend', nowMarkup);
 
+nowImag.style.display = 'flex'; 
+nowImag.style.gap = '24px'
+ 
+console.log(nowImag.children)
+
+const x = [...nowImag.children]
+console.log(x)
+
+x.forEach(element => {
+  element.querySelector(".image").style.width = '250px';
+  element.querySelector(".image").style.height = '250px'
+});
